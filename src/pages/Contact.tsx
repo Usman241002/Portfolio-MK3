@@ -30,7 +30,7 @@ export default function Contact() {
   }
 
   return (
-    <Box sx={{ py: 4, px: 4, backgroundColor: "#F4F4F9" }}>
+    <Box sx={{ py: 4, px: { xs: 2, sm: 4 }, backgroundColor: "#F4F4F9" }}>
       <Container>
         <Grid
           container

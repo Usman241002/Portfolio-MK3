@@ -19,7 +19,9 @@ export default function Home() {
 
   return (
     <>
-      <Box sx={{ py: 4, px: 4, backgroundColor: "primary.main" }}>
+      <Box
+        sx={{ py: 4, px: { xs: 2, sm: 4 }, backgroundColor: "primary.main" }}
+      >
         <Container>
           <Stack
             justifyContent="space-between"
@@ -98,7 +100,7 @@ export default function Home() {
           </Stack>
         </Container>
       </Box>
-      <Box sx={{ py: 4, px: 4, backgroundColor: "#F4F4F9" }}>
+      <Box sx={{ py: 4, px: { xs: 2, sm: 4 }, backgroundColor: "#F4F4F9" }}>
         <Container>
           <Stack direction="column" spacing={4}>
             <Typography

@@ -34,7 +34,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <Box sx={{ py: 4, px: 4, backgroundColor: "#F4F4F9" }}>
+    <Box sx={{ py: 4, px: { xs: 2, sm: 4 }, backgroundColor: "#F4F4F9" }}>
       <Container>
         <Stack direction="column" spacing={4}>
           <Typography variant="h4" color="primary" sx={{ fontWeight: "bold" }}>

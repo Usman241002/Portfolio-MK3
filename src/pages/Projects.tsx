@@ -6,7 +6,7 @@ export default function Projects() {
   const projectsReversed = projects.slice().reverse();
 
   return (
-    <Box sx={{ py: 6, px: 4, backgroundColor: "#F4F4F9" }}>
+    <Box sx={{ py: 6, px: { xs: 2, sm: 4 }, backgroundColor: "#F4F4F9" }}>
       <Container>
         <Grid container spacing={4}>
           {projectsReversed.map((project) => (

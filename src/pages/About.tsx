@@ -9,7 +9,7 @@ export default function About() {
     "Skills",
   ];
   return (
-    <Box sx={{ py: 4, px: 4, backgroundColor: "#F4F4F9" }}>
+    <Box sx={{ py: 4, px: { xs: 2, sm: 4 }, backgroundColor: "#F4F4F9" }}>
       <Container>
         <Grid container spacing={3} direction={{ xs: "column", sm: "row" }}>
           <Grid size={{ xs: 12, sm: 4, md: 3, lg: 2 }}>
