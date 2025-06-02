@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet, useLocation } from "react-router-dom";
+import { Box, Container } from "@mui/material";
 
 export default function Layout() {
   const location = useLocation();
@@ -35,10 +36,16 @@ export default function Layout() {
       {isHome ? (
         ""
       ) : (
-        <Header
-          title={locationObj[basePath].title}
-          description={locationObj[basePath].description}
-        />
+        <Box
+          sx={{ py: 4, px: { xs: 2, sm: 4 }, backgroundColor: "primary.main" }}
+        >
+          <Container>
+            <Header
+              title={locationObj[basePath].title}
+              description={locationObj[basePath].description}
+            />
+          </Container>
+        </Box>
       )}
       <Outlet />
       <Footer />
