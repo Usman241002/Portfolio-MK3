@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { ArrowBack, GitHub } from "@mui/icons-material";
 import projects from "../data/projects";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 type Project = {
   id: number;
@@ -18,6 +18,21 @@ export default function ProjectDetail() {
   const project: Project | undefined = projects.find((p) => p.title === title);
   const base = "/images/projectImages/";
 
+  if (project == undefined) {
+    return (
+      <Box sx={{ py: 4, px: 4, backgroundColor: "#F4F4F9" }}>
+        <Container>
+          <Typography variant="h4" color="primary" sx={{ fontWeight: "bold" }}>
+            Project Not Found
+          </Typography>
+          <Typography variant="body1" color="text.primary">
+            The project does not exist.
+          </Typography>
+        </Container>
+      </Box>
+    );
+  }
+
   return (
     <Box sx={{ py: 4, px: 4, backgroundColor: "#F4F4F9" }}>
       <Container>
@@ -31,7 +46,7 @@ export default function ProjectDetail() {
             spacing={4}
             direction={{
               xs: "column-reverse",
-              xs: "column-reverse",
+              sm: "column-reverse",
               md: "row",
             }}
           >
@@ -69,6 +84,7 @@ export default function ProjectDetail() {
             <Button
               variant="outlined"
               color="primary"
+              href={project.githubLink}
               startIcon={<GitHub />}
               disableRipple
               disableElevation

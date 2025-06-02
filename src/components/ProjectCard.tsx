@@ -7,7 +7,7 @@ import {
   CardActions,
   Button,
 } from "@mui/material";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type props = {
   id: number;
