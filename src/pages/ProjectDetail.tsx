@@ -1,5 +1,5 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
-import { ArrowBack, GitHub } from "@mui/icons-material";
+import { ArrowBack, GitHub, Launch } from "@mui/icons-material";
 import projects from "../data/projects";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -9,6 +9,7 @@ type Project = {
   subtitle: string;
   description: string;
   image: string;
+  link: string | null;
   githubLink: string;
 };
 
@@ -91,6 +92,19 @@ export default function ProjectDetail() {
             >
               Github
             </Button>
+            {project.link != null ? (
+              <Button
+                variant="outlined"
+                color="primary"
+                href={project.link}
+                target="_blank"
+                startIcon={<Launch />}
+                disableRipple
+                disableElevation
+              >
+                Project Site
+              </Button>
+            ) : null}
           </Stack>
         </Stack>
       </Container>
