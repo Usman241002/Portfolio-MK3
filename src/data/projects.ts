@@ -35,6 +35,15 @@ const projects: Project[] = [
     image: "Portfoliomk1.png",
     githubLink: "https://github.com/Usman241002/Usman241002.github.io",
   },
+  {
+    id: 4,
+    title: "ChatApp",
+    subtitle: "A real time anonymous chat application",
+    description:
+      "ChatApp is a real-time anonymous chat application built using React, Redux and a library called Socket.IO. It allows users to sign up anonymously and chat with users across the globe in real-time without revealing their identity. The application is designed to be user-friendly and easy to use, with a clean and modern interface. It also features a variety of features such as message notifications, private messaging, and profile searching.",
+    image: "ChatApp.png",
+    githubLink: "https://github.com/Usman241002/ChatApp-Mk4",
+  },
 ];
 
 export default projects;
